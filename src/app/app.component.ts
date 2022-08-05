@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+  showRecipes: boolean = false;
+  showShoppingList: boolean = false;
+
+  onRecipesClicked(show: {recipeView: boolean, shoppingListView: boolean}) {
+    this.showRecipes = show.recipeView;
+    this.showShoppingList = show.shoppingListView;
+  }
+
+  onShoppingListClicked(show: {recipeView: boolean, shoppingListView: boolean}) {
+    this.showRecipes = show.recipeView;
+    this.showShoppingList = show.shoppingListView;
+  }
 }
